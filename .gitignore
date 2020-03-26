@@ -5,6 +5,7 @@
 *.jpg
 __pycache__
 *.weights
+*.pth
 
 *.DS_Store
 # Byte-compiled / optimized / DLL files

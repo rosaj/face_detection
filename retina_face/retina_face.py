@@ -2,6 +2,9 @@ import insightface
 import cv2
 from common.det_face import DetFace
 
+# https://github.com/deepinsight/insightface/tree/master/RetinaFace
+# RetinaFace and ArcFace
+
 Name = 'RetinaFace'
 
 
