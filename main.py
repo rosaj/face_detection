@@ -2,6 +2,7 @@ from yoloface import yoloface
 from mtcnn import mtcnn
 from haarcascade import haarcascade
 from retina_face import retina_face
+from dsfd import dsfd
 from S3FD import s3fd
 
 from yoloface.utils import *
@@ -58,4 +59,4 @@ def do_detect(stream_path, detector):
 
 
 if __name__ == '__main__':
-    do_detect('sut_KS_48.mp4', s3fd)
+    do_detect('sut_KS_48.mp4', dsfd)

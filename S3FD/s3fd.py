@@ -1,15 +1,20 @@
 # -*- coding:utf-8 -*-
 
+# https://github.com/Team-Neighborhood/awesome-face-detection/tree/master/S3FD
+
+
 import torch
+"""
 import torch.nn as nn
 import torch.utils.data as data
 import torch.backends.cudnn as cudnn
 import torchvision.transforms as transforms
 
-import cv2
 import time
 import numpy as np
 from PIL import Image
+"""
+import cv2
 
 from S3FD.data.config import cfg
 from S3FD.s3fd_model import build_s3fd
@@ -49,6 +54,7 @@ def detect_faces(frame, thresh=0.2):
     # image = cv2.resize(img, (640, 640))
     # image = cv2.resize(image, None, fx=1 / 8, fy=1 / 8)
     # print (image.shape)
+
     image = img
     x = to_chw_bgr(image)
     x = x.astype('float32')
@@ -65,7 +71,6 @@ def detect_faces(frame, thresh=0.2):
     scale = torch.Tensor([img.shape[1], img.shape[0], img.shape[1], img.shape[0]])
 
     det_faces = []
-    # list_bbox_tlbr = []
     for i in range(detections.size(1)):
         j = 0
         while detections[0, i, j, 0] >= thresh:
@@ -73,7 +78,6 @@ def detect_faces(frame, thresh=0.2):
             score = detections[0, i, j, 0].cpu().numpy()
 
             det_faces.append(DetFace(float(score), (pt[0], pt[1], pt[2], pt[3])))
-            # list_bbox_tlbr.append([pt[1], pt[0], pt[3], pt[2], float(score)])
             j += 1
 
     return det_faces
