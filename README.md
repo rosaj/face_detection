@@ -15,7 +15,7 @@
     - Trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `face_boxes/weights`
 - [Haarcascade from OpenCV](https://github.com/opencv/opencv)
-  - Model (1MB) already included in this repository
+  - [Model](./haarcascade/haarcascade_frontalface_default.xml) (1MB) already included in this repository
 - [MTCNN](https://github.com/ipazc/mtcnn)
   - Implementation from [this repository](https://github.com/timesler/facenet-pytorch)
 - [RetinaFace](https://github.com/deepinsight/insightface/tree/master/RetinaFace)
