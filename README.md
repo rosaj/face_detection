@@ -16,12 +16,12 @@
     - Should be placed under `face_boxes/weights`
 - [Haarcascade from OpenCV](https://github.com/opencv/opencv)
   - [Model](./haarcascade/haarcascade_frontalface_default.xml) (1MB) already included in this repository
-- [MTCNN](https://github.com/ipazc/mtcnn)
+- [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment)
   - Implementation from [this repository](https://github.com/timesler/facenet-pytorch)
 - [RetinaFace](https://github.com/deepinsight/insightface/tree/master/RetinaFace)
   - [ResNet50](https://www.dropbox.com/s/53ftnlarhyrpkg2/retinaface-R50.zip?dl=0) model (112Mb) pretrained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/) 
   - Automatically downloaded with first use (the model is placed @ `$USER$\.insightface\models\`)
-- [S3FD]() 
+- [S3FD](https://github.com/Team-Neighborhood/awesome-face-detection/tree/master/S3FD) 
   - [Model](https://drive.google.com/file/d/1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7/view) (`sfd_face.pth` - 90Mb) needs to be downloaded from the repository 
     - Trained on  [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `S3FD/weights`
@@ -29,4 +29,42 @@
   - [Model](https://drive.google.com/file/d/1xYasjU52whXMLT5MtF7RCPQkV66993oR/view) (`yolov3-wider_16000.weights` - 246Mb) needs to be downladed from the repository
     - YOLOv3 model trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `yoloface/model-weights`
+
+
+
+## Accuracy
+
+*Reported by the authors*
+
+
+
+- Results on validation set of WIDER FACE:
+
+| Model       | Easy Set | Medium Set | Hard Set |
+| ----------- | :------: | :--------: | :------: |
+| CenterFace  |   93.5   |    92.4    |   87.5   |
+| DSFD        |   96.6   |    95.7    |   90.4   |
+| FaceBoxes   |    -     |     -      |    -     |
+| Haarcascade |    -     |     -      |    -     |
+| MTCNN       |    -     |     -      |    -     |
+| RetinaFace  |   96.9   |    96.1    |   91.8   |
+| S3FD        |   93.7   |    92.4    |   85.2   |
+| YoloFace    |    -     |     -      |    -     |
+
+
+
+
+
+- Results on test set of WIDER FACE:
+
+| Model       | Easy Set | Medium Set | Hard Set |
+| ----------- | :------: | :--------: | :------: |
+| CenterFace  |   93.2   |    92.1    |   87.3   |
+| DSFD        |   96.0   |    95.3    |   90.0   |
+| FaceBoxes   |    -     |     -      |    -     |
+| Haarcascade |    -     |     -      |    -     |
+| MTCNN       |    -     |     -      |    -     |
+| RetinaFace  |   96.3   |    95.6    |   91.4   |
+| S3FD        |   92.8   |    91.3    |   84.0   |
+| YoloFace    |    -     |     -      |    -     |
 
