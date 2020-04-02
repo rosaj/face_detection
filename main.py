@@ -5,6 +5,7 @@ from retina_face import retina_face
 from dsfd import dsfd
 from S3FD import s3fd
 from centerface import centerface
+from face_boxes import FaceBoxes
 
 from yoloface.utils import *
 import cv2
@@ -60,4 +61,4 @@ def do_detect(stream_path, detector):
 
 
 if __name__ == '__main__':
-    do_detect('sut_KS_48.mp4', centerface)
+    do_detect('sut_KS_48.mp4', FaceBoxes)
