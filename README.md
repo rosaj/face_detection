@@ -9,9 +9,9 @@
   - [Model](https://drive.google.com/file/d/1WeXlNYsM6dMP3xQQELI-4gxhwKUQxc3-/view) (`WIDERFace_DSFD_RES152.pth` - 481Mb) needs to be downloaded from the original repository
     - Trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `dsdf/weights` 
-- [FaceBoxes](https://github.com/sfzhang15/FaceBoxes) (`FaceBoxesProd.pth` - 4.1Mb)
+- [FaceBoxes](https://github.com/sfzhang15/FaceBoxes)
   - [PyTorch implementation](https://github.com/zisianw/FaceBoxes.PyTorch) is used in this project
-  - [Model](https://drive.google.com/file/d/1tRVwOlu0QtjvADQ2H7vqrRwsWEmaqioI/edit) needs to be downloaded from [PyTorch implementation version](https://github.com/zisianw/FaceBoxes.PyTorch)
+  - [Model](https://drive.google.com/file/d/1tRVwOlu0QtjvADQ2H7vqrRwsWEmaqioI/edit) (`FaceBoxesProd.pth` - 4.1Mb) needs to be downloaded from [PyTorch implementation version](https://github.com/zisianw/FaceBoxes.PyTorch)
     - Trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `face_boxes/weights`
 - [Haarcascade from OpenCV](https://github.com/opencv/opencv)
@@ -27,6 +27,6 @@
     - Should be placed under `S3FD/weights`
 - [YoloFace](https://github.com/sthanhng/yoloface)
   - [Model](https://drive.google.com/file/d/1xYasjU52whXMLT5MtF7RCPQkV66993oR/view) (`yolov3-wider_16000.weights` - 246Mb) needs to be downladed from the repository
-    - Should be placed under `yoloface/model-weights`
     - YOLOv3 model trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
+    - Should be placed under `yoloface/model-weights`
 
