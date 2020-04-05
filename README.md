@@ -68,3 +68,13 @@
 | S3FD        |   92.8   |    91.3    |   84.0   |
 | YoloFace    |    -     |     -      |    -     |
 
+
+
+
+
+## More
+
+[State-of-the-art methods](https://paperswithcode.com/sota/face-detection-on-wider-face-hard) for Face Detection on WIDER Face (Hard) dataset
+
+[Papers with code - Face Detectors](https://paperswithcode.com/task/face-detection)
+
