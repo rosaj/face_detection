@@ -44,7 +44,7 @@ def do_detect(stream_path, detector):
 
         for f in faces:
             b = f.bbox
-            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3])
+            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], True)
 
         cv2.imshow(wind_name, frame)
 
@@ -61,4 +61,4 @@ def do_detect(stream_path, detector):
 
 
 if __name__ == '__main__':
-    do_detect('sut_KS_48.mp4', FaceBoxes)
+    do_detect('sut_KS_48.mp4', retina_face)

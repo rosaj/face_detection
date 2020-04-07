@@ -24,5 +24,5 @@ def detect_faces(frame):
         flags=cv2.CASCADE_SCALE_IMAGE
     )
 
-    det_faces = [DetFace(1, (x, y, x + w, y + h))  for (x, y, w, h) in faces]
+    det_faces = [DetFace(1, (x, y, x + w, y + h)) for (x, y, w, h) in faces]
     return det_faces

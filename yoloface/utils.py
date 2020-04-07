@@ -30,6 +30,24 @@ COLOR_YELLOW = (0, 255, 255)
 # Help functions
 # -------------------------------------------------------------------
 
+# Blur the face within the bounding box
+def blur_face(frame, left, top, right, bottom, factor=3.0):
+    # automatically determine the size of the blurring kernel based
+    # on the spatial dimensions of the input image
+    image = frame[top:bottom, left:right]
+    (h, w) = image.shape[:2]
+    kW = int(w / factor)
+    kH = int(h / factor)
+    # ensure the width of the kernel is odd
+    if kW % 2 == 0:
+        kW -= 1
+    # ensure the height of the kernel is odd
+    if kH % 2 == 0:
+        kH -= 1
+    # apply a Gaussian blur to the input image using our computed kernel size
+    frame[top:bottom, left:right] = cv2.GaussianBlur(image, (kW, kH), 0)
+
+
 # Get the names of the output layers
 def get_outputs_names(net):
     # Get the names of all the layers in the network
@@ -41,7 +59,7 @@ def get_outputs_names(net):
 
 
 # Draw the predicted bounding box
-def draw_predict(frame, conf, left, top, right, bottom):
+def draw_predict(frame, conf, left, top, right, bottom, blurr=False):
     left = int(left)
     top = int(top)
     right = int(right)
@@ -57,6 +75,9 @@ def draw_predict(frame, conf, left, top, right, bottom):
     top = max(top, label_size[1])
     cv2.putText(frame, text, (left, top - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4,
                 COLOR_WHITE, 1)
+
+    if blurr:
+        blur_face(frame, left, top, right, bottom)
 
 
 def post_process(frame, outs, conf_threshold, nms_threshold):
