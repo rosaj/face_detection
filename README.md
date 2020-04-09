@@ -87,7 +87,7 @@
 
 
 
-## Performance
+## Performance with current settings used to detect faces of volleyball players
 
 
 
