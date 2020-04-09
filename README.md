@@ -1,6 +1,12 @@
-# Collection of face detection algorithms
+# Collection of face detection algorithms and One-Shot Face recognition
 
 
+
+## Face detection
+
+
+
+### Detectors
 
 - [CenterFace](https://github.com/Star-Clouds/CenterFace) 
   - Model (7.3Mb) already included in this repository
@@ -32,7 +38,7 @@
 
 
 
-## Accuracy
+### Accuracy
 
 *Reported by the authors*
 
@@ -69,6 +75,12 @@
 | YoloFace    |    -     |     -      |    -     |
 
 
+
+
+
+## Face recognition
+
+[InsightFace/ArcFace](https://github.com/deepinsight/insightface) recognition model is used to preform face recognition. Faces are saved in a list of recognized faces once they are recognized as a new face. A face is recognized as a new face if none of the other recognized faces doesn't achieve higher similarity than `FACE_CONF_THRESHOLD`. Face recognition can be easily switched on by using `retina_face` detector and setting `retina_face.Recognition = True`.
 
 
 

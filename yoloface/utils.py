@@ -59,7 +59,7 @@ def get_outputs_names(net):
 
 
 # Draw the predicted bounding box
-def draw_predict(frame, conf, left, top, right, bottom, blurr=False):
+def draw_predict(frame, conf, left, top, right, bottom, blur=False, name=''):
     left = int(left)
     top = int(top)
     right = int(right)
@@ -67,7 +67,7 @@ def draw_predict(frame, conf, left, top, right, bottom, blurr=False):
     # Draw a bounding box.
     cv2.rectangle(frame, (left, top), (right, bottom), COLOR_YELLOW, 2)
 
-    text = '{:.2f}'.format(conf)
+    text = '{:.2f} {}'.format(conf, name)
 
     # Display the label at the top of the bounding box
     label_size, base_line = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
@@ -76,7 +76,7 @@ def draw_predict(frame, conf, left, top, right, bottom, blurr=False):
     cv2.putText(frame, text, (left, top - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4,
                 COLOR_WHITE, 1)
 
-    if blurr:
+    if blur:
         blur_face(frame, left, top, right, bottom)
 
 

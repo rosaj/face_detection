@@ -16,16 +16,21 @@ def do_detect(stream_path, detector):
     cv2.namedWindow(wind_name, cv2.WINDOW_NORMAL)
 
     cap = cv2.VideoCapture(stream_path)
+    i = 0
 
     while True:
 
         has_frame, frame = cap.read()
+        i += 1
 
         # Stop the program if reached end of video
         if not has_frame:
             print('[i] ==> Done processing!!!')
             cv2.waitKey(1000)
             break
+
+        if i % 10 != 0:
+            continue
 
         faces = detector.detect_faces(frame)
 
@@ -44,7 +49,7 @@ def do_detect(stream_path, detector):
 
         for f in faces:
             b = f.bbox
-            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], True)
+            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], True, f.name)
 
         cv2.imshow(wind_name, frame)
 
@@ -61,4 +66,5 @@ def do_detect(stream_path, detector):
 
 
 if __name__ == '__main__':
+    # retina_face.Recognition = True
     do_detect('sut_KS_48.mp4', retina_face)
