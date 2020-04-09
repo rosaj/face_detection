@@ -84,6 +84,26 @@
 
 
 
+
+
+
+## Performance
+
+
+
+| Model       | Seconds per frame |
+| ----------- | :---------------: |
+| CenterFace  |        1          |
+| DSFD        |        48         |
+| FaceBoxes   |        0.3        |
+| Haarcascade |         1         |
+| MTCNN       |         4         |
+| RetinaFace  |        90         |
+| S3FD        |        20         |
+| YoloFace    |        10         |
+
+
+
 ## More
 
 [State-of-the-art methods](https://paperswithcode.com/sota/face-detection-on-wider-face-hard) for Face Detection on WIDER Face (Hard) dataset

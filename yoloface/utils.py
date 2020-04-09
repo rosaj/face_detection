@@ -44,6 +44,9 @@ def blur_face(frame, left, top, right, bottom, factor=3.0):
     # ensure the height of the kernel is odd
     if kH % 2 == 0:
         kH -= 1
+
+    kW = max(1, kW)
+    kH = max(1, kH)
     # apply a Gaussian blur to the input image using our computed kernel size
     frame[top:bottom, left:right] = cv2.GaussianBlur(image, (kW, kH), 0)
 

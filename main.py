@@ -9,6 +9,7 @@ from face_boxes import FaceBoxes
 
 from yoloface.utils import *
 import cv2
+import time
 
 
 def do_detect(stream_path, detector):
@@ -29,10 +30,12 @@ def do_detect(stream_path, detector):
             cv2.waitKey(1000)
             break
 
-        if i % 10 != 0:
-            continue
+        # if i % 10 != 0:
+        #     continue
 
+        start_time = time.time()
         faces = detector.detect_faces(frame)
+        print("--- %s seconds ---" % (time.time() - start_time))
 
         print('[i] ==> # detected faces: {}'.format(len(faces)))
         print('#' * 60)
