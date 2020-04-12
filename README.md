@@ -3,7 +3,8 @@
 
 
 ## Face detection
-\
+
+<br />
 
 ### Detectors
 
@@ -35,8 +36,9 @@
     - YOLOv3 model trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `yoloface/model-weights`
 
-\
-\
+<br />
+<br />
+
 ### Accuracy
 
 *Reported by the authors*
@@ -75,9 +77,9 @@
 
 
 
-\
+<br />
 
-\
+<br />
 
 
 
@@ -87,9 +89,8 @@
 
 
 
-\
-
-\
+<br />
+<br />
 
 
 
@@ -111,9 +112,8 @@
 
 
 
-\
-
-\
+<br />
+<br />
 
 ## More
 
