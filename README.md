@@ -3,18 +3,17 @@
 
 
 ## Face detection
-
 \
 
 ### Detectors
 
-- [CenterFace](https://github.com/Star-Clouds/CenterFace) 
+- [CenterFace](https://github.com/Star-Clouds/CenterFace)
   - Model (7.3Mb) already included in this repository
-- [DSFD](https://github.com/TencentYoutuResearch/FaceDetection-DSFD) 
+- [DSFD](https://github.com/TencentYoutuResearch/FaceDetection-DSFD)
   - Implementation from [this repository](https://github.com/hukkelas/DSFD-Pytorch-Inference)
   - [Model](https://drive.google.com/file/d/1WeXlNYsM6dMP3xQQELI-4gxhwKUQxc3-/view) (`WIDERFace_DSFD_RES152.pth` - 481Mb) needs to be downloaded from the original repository
     - Trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
-    - Should be placed under `dsdf/weights` 
+    - Should be placed under `dsdf/weights`
 - [FaceBoxes](https://github.com/sfzhang15/FaceBoxes)
   - [PyTorch implementation](https://github.com/zisianw/FaceBoxes.PyTorch) is used in this project
   - [Model](https://drive.google.com/file/d/1tRVwOlu0QtjvADQ2H7vqrRwsWEmaqioI/edit) (`FaceBoxesProd.pth` - 4.1Mb) needs to be downloaded from [PyTorch implementation version](https://github.com/zisianw/FaceBoxes.PyTorch)
@@ -25,10 +24,10 @@
 - [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment)
   - Implementation from [this repository](https://github.com/timesler/facenet-pytorch)
 - [RetinaFace](https://github.com/deepinsight/insightface/tree/master/RetinaFace)
-  - [ResNet50](https://www.dropbox.com/s/53ftnlarhyrpkg2/retinaface-R50.zip?dl=0) model (112Mb) pretrained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/) 
+  - [ResNet50](https://www.dropbox.com/s/53ftnlarhyrpkg2/retinaface-R50.zip?dl=0) model (112Mb) pretrained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
   - Automatically downloaded with first use (the model is placed @ `$USER$\.insightface\models\`)
-- [S3FD](https://github.com/Team-Neighborhood/awesome-face-detection/tree/master/S3FD) 
-  - [Model](https://drive.google.com/file/d/1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7/view) (`sfd_face.pth` - 90Mb) needs to be downloaded from the repository 
+- [S3FD](https://github.com/Team-Neighborhood/awesome-face-detection/tree/master/S3FD)
+  - [Model](https://drive.google.com/file/d/1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7/view) (`sfd_face.pth` - 90Mb) needs to be downloaded from the repository
     - Trained on  [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `S3FD/weights`
 - [YoloFace](https://github.com/sthanhng/yoloface)
@@ -37,10 +36,7 @@
     - Should be placed under `yoloface/model-weights`
 
 \
-
 \
-
-
 
 ### Accuracy
 
@@ -125,4 +121,3 @@
 [State-of-the-art methods](https://paperswithcode.com/sota/face-detection-on-wider-face-hard) for Face Detection on WIDER Face (Hard) dataset
 
 [Papers with code - Face Detectors](https://paperswithcode.com/task/face-detection)
-
