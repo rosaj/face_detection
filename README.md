@@ -4,7 +4,7 @@
 
 ## Face detection
 
-
+\
 
 ### Detectors
 
@@ -35,6 +35,10 @@
   - [Model](https://drive.google.com/file/d/1xYasjU52whXMLT5MtF7RCPQkV66993oR/view) (`yolov3-wider_16000.weights` - 246Mb) needs to be downladed from the repository
     - YOLOv3 model trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
     - Should be placed under `yoloface/model-weights`
+
+\
+
+\
 
 
 
@@ -76,6 +80,10 @@
 
 
 
+\
+
+\
+
 
 
 ## Face recognition
@@ -83,6 +91,10 @@
 [InsightFace/ArcFace](https://github.com/deepinsight/insightface) recognition model is used to preform face recognition. Faces are saved in a list of recognized faces once they are recognized as a new face. A face is recognized as a new face if none of the other recognized faces doesn't achieve higher similarity than `FACE_CONF_THRESHOLD`. Face recognition can be easily switched on by using `retina_face` detector and setting `retina_face.Recognition = True`.
 
 
+
+\
+
+\
 
 
 
@@ -103,6 +115,10 @@
 | YoloFace    |        10         |
 
 
+
+\
+
+\
 
 ## More
 
