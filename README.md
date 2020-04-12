@@ -1,6 +1,7 @@
 # Collection of face detection algorithms and One-Shot Face recognition
 
 
+<br />
 
 ## Face detection
 
