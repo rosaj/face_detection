@@ -48,6 +48,8 @@
 
 - Results on validation set of WIDER FACE:
 
+<center>
+
 | Model       | Easy Set | Medium Set | Hard Set |
 | ----------- | :------: | :--------: | :------: |
 | CenterFace  |   93.5   |    92.4    |   87.5   |
@@ -59,11 +61,13 @@
 | S3FD        |   93.7   |    92.4    |   85.2   |
 | YoloFace    |    -     |     -      |    -     |
 
-
+</center>
 
 
 
 - Results on test set of WIDER FACE:
+
+<center>
 
 | Model       | Easy Set | Medium Set | Hard Set |
 | ----------- | :------: | :--------: | :------: |
@@ -76,6 +80,7 @@
 | S3FD        |   92.8   |    91.3    |   84.0   |
 | YoloFace    |    -     |     -      |    -     |
 
+</center>
 
 
 <br />
@@ -98,7 +103,7 @@
 
 ## Performance with current settings used to detect faces of volleyball players
 
-
+<center>
 
 | Model       | Seconds per frame |
 | ----------- | :---------------: |
@@ -111,7 +116,7 @@
 | S3FD        |        20         |
 | YoloFace    |        10         |
 
-
+</center>
 
 <br />
 <br />
