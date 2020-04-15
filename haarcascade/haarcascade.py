@@ -1,7 +1,7 @@
 import cv2
 from common.det_face import DetFace
 
-Name = 'haarcascade'
+Name = 'Haar Cascade'
 
 
 def __load_model():

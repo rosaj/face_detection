@@ -11,6 +11,7 @@
 
 - [CenterFace](https://github.com/Star-Clouds/CenterFace)
   - Model (7.3Mb) already included in this repository
+    - Trained on [WIDER FACE](http://shuoyang1213.me/WIDERFACE/)
 - [DSFD](https://github.com/TencentYoutuResearch/FaceDetection-DSFD)
   - Implementation from [this repository](https://github.com/hukkelas/DSFD-Pytorch-Inference)
   - [Model](https://drive.google.com/file/d/1WeXlNYsM6dMP3xQQELI-4gxhwKUQxc3-/view) (`WIDERFace_DSFD_RES152.pth` - 481Mb) needs to be downloaded from the original repository
@@ -48,7 +49,6 @@
 
 - Results on validation set of WIDER FACE:
 
-<center>
 
 | Model       | Easy Set | Medium Set | Hard Set |
 | ----------- | :------: | :--------: | :------: |
@@ -61,13 +61,11 @@
 | S3FD        |   93.7   |    92.4    |   85.2   |
 | YoloFace    |    -     |     -      |    -     |
 
-</center>
 
 
 
 - Results on test set of WIDER FACE:
 
-<center>
 
 | Model       | Easy Set | Medium Set | Hard Set |
 | ----------- | :------: | :--------: | :------: |
@@ -79,8 +77,6 @@
 | RetinaFace  |   96.3   |    95.6    |   91.4   |
 | S3FD        |   92.8   |    91.3    |   84.0   |
 | YoloFace    |    -     |     -      |    -     |
-
-</center>
 
 
 <br />
@@ -101,9 +97,8 @@
 
 
 
-## Performance with current settings used to detect faces of volleyball players
+## Performance with current settings used to detect faces of handball players
 
-<center>
 
 | Model       | Seconds per frame |
 | ----------- | :---------------: |
@@ -116,7 +111,6 @@
 | S3FD        |        20         |
 | YoloFace    |        10         |
 
-</center>
 
 <br />
 <br />
