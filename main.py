@@ -11,18 +11,29 @@ from yoloface.utils import *
 import cv2
 import time
 
+__all_detectors = [
+    yoloface,
+    mtcnn,
+    haarcascade,
+    retina_face,
+    dsfd,
+    s3fd,
+    centerface,
+    FaceBoxes
+]
 
-def do_detect(stream_path, detector):
+
+def do_detect(stream_path, detector, save=False, blurFaces=False):
     wind_name = 'Face Detection using ' + detector.Name
     cv2.namedWindow(wind_name, cv2.WINDOW_NORMAL)
 
     cap = cv2.VideoCapture(stream_path)
-    i = 0
+    count = 0
 
     while True:
 
         has_frame, frame = cap.read()
-        i += 1
+        count += 1
 
         # Stop the program if reached end of video
         if not has_frame:
@@ -30,7 +41,7 @@ def do_detect(stream_path, detector):
             cv2.waitKey(1000)
             break
 
-        # if i % 10 != 0:
+        # if count % 70 != 0:
         #     continue
 
         start_time = time.time()
@@ -42,17 +53,21 @@ def do_detect(stream_path, detector):
 
         # initialize the set of information we'll displaying on the frame
         info = [
-            ('number of faces detected', '{}'.format(len(faces)))
+            ('{}: Number of faces detected'.format(detector.Name), '{}'.format(len(faces)))
         ]
 
         for (i, (txt, val)) in enumerate(info):
             text = '{}: {}'.format(txt, val)
-            cv2.putText(frame, text, (10, (i * 20) + 20),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, COLOR_RED, 2)
+            cv2.putText(frame, text, (10, (i+1) * 30),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, COLOR_RED, 2)
 
         for f in faces:
             b = f.bbox
-            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], True, f.name)
+            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], blurFaces, f.name)
+
+        if save:
+            cv2.imwrite('imgs/' + detector.Name + '_face0_' + str(count) + '.png', frame)
+            return
 
         cv2.imshow(wind_name, frame)
 
@@ -69,5 +84,7 @@ def do_detect(stream_path, detector):
 
 
 if __name__ == '__main__':
-    # retina_face.Recognition = True
-    do_detect('sut_KS_48.mp4', retina_face)
+    retina_face.Recognition = True
+    do_detect('sut_KS_48.mp4', retina_face, save=True, blurFaces=False)
+    # for detector in __all_detectors:
+    #     do_detect('sut_KS_48.mp4', detector, True)
