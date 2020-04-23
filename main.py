@@ -23,7 +23,7 @@ __all_detectors = [
 ]
 
 
-def do_detect(stream_path, detector, save=False, blurFaces=False):
+def do_detect(stream_path, detector, save=False, blur_faces=False):
     wind_name = 'Face Detection using ' + detector.Name
     cv2.namedWindow(wind_name, cv2.WINDOW_NORMAL)
 
@@ -41,6 +41,8 @@ def do_detect(stream_path, detector, save=False, blurFaces=False):
             cv2.waitKey(1000)
             break
 
+        # Uncomment this if you want to skip the frames
+        # This skips to every 70th frame
         # if count % 70 != 0:
         #     continue
 
@@ -63,10 +65,10 @@ def do_detect(stream_path, detector, save=False, blurFaces=False):
 
         for f in faces:
             b = f.bbox
-            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], blurFaces, f.name)
+            draw_predict(frame, f.conf, b[0], b[1], b[2], b[3], blur_faces, f.name)
 
         if save:
-            cv2.imwrite('imgs/' + detector.Name + '_face0_' + str(count) + '.png', frame)
+            cv2.imwrite('imgs/new/' + detector.Name + '' + str(count) + '.png', frame)
             return
 
         cv2.imshow(wind_name, frame)
@@ -84,7 +86,8 @@ def do_detect(stream_path, detector, save=False, blurFaces=False):
 
 
 if __name__ == '__main__':
-    retina_face.Recognition = True
-    do_detect('sut_KS_48.mp4', retina_face, save=True, blurFaces=False)
+    # retina_face.Recognition = True
+    # do_detect('sut_KS_48.mp4', retina_face, save=True, blur_faces=True)
+    do_detect('sut_KS_48.mp4', retina_face)
     # for detector in __all_detectors:
-    #     do_detect('sut_KS_48.mp4', detector, True)
+    #    do_detect('sut_KS_48.mp4', detector, True, True)
