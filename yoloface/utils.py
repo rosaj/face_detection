@@ -31,7 +31,7 @@ COLOR_YELLOW = (0, 255, 255)
 # -------------------------------------------------------------------
 
 # Blur the face within the bounding box
-def blur_face(frame, left, top, right, bottom, factor=3.0):
+def blur_face(frame, left, top, right, bottom, factor=1.0):
     # automatically determine the size of the blurring kernel based
     # on the spatial dimensions of the input image
     image = frame[top:bottom, left:right]
